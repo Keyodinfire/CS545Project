@@ -11,9 +11,12 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var titleField: UITextField!
     @IBOutlet var bodyField: UITextField!
-    @IBOutlet var datePicker: UIDatePicker!
+    @IBOutlet var datePickerStart: UIDatePicker!
+    @IBOutlet var datePickerEnd: UIDatePicker!
+    @IBOutlet var breakPicker: UIDatePicker!
+    @IBOutlet var breakEndPicker: UIDatePicker!
     
-    public var completion: ((String, String, Date) -> Void)?
+    public var completion: ((String, String, Date, Date, Date, Date) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +30,12 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         if let titleText = titleField.text, !titleText.isEmpty,
            let bodyText = bodyField.text, !bodyText.isEmpty {
             
-            let reminderDate = datePicker.date
+            let reminderDateStart = datePickerStart.date
+            let reminderDateEnd = datePickerEnd.date
+            let reminderBreak = breakPicker.date
+            let reminderBreakEnd = breakEndPicker.date
             
-            completion?(titleText, bodyText, reminderDate)
+            completion?(titleText, bodyText, reminderDateStart, reminderDateEnd, reminderBreak, reminderBreakEnd)
         }
     }
     

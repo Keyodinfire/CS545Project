@@ -1,11 +1,12 @@
 //
 //  AppDelegate.swift
-//  WorkMoreApp
+//  Ha
 //
-//  Created by user201634 on 7/23/21.
+//  Created by user201634 on 8/20/21.
 //
 
 import UIKit
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,6 +32,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
 }
-
